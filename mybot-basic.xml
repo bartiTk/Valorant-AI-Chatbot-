@@ -1,0 +1,98 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+<!-- Greetings and Politeness -->
+<category> <pattern> HELLO </pattern>
+  <template>HELLO</template> </category>
+
+<category> <pattern> HELLO * </pattern>
+  <template><srai>HELLO</srai></template> </category>
+
+<category> <pattern> HI </pattern>
+  <template><srai>HELLO</srai></template> </category>
+
+<category> <pattern> HI * </pattern>
+  <template><srai>HELLO</srai></template> </category>
+
+<category> <pattern> HOW ARE YOU </pattern>
+  <template>I'm functioning within normal parameters, thanks for asking.</template></category>
+
+<category><pattern> I AM FINE </pattern>
+  <template>That's good to know. What would you like to discuss about?</template></category>
+
+<category><pattern> BYE </pattern>
+  <template>#0$Bye! Nice talking to you. You take care now.</template></category>
+
+<category><pattern> GOODBYE </pattern>
+  <template><srai>BYE</srai></template></category>
+
+<category><pattern> EXIT </pattern>
+  <template><srai>BYE</srai></template></category>
+
+<category> <pattern> THANKS </pattern>
+  <template>You are welcome.</template></category>
+
+<category> <pattern> THANK YOU </pattern>
+  <template><srai>THANKS</srai></template></category>
+
+<category> <pattern> CHEERS </pattern>
+  <template>Sure mate.</template></category>
+
+<category> <pattern> CHEERS * </pattern>
+  <template>Sure mate.</template></category>
+
+
+
+<!-- Valorant Questions -->
+
+<category> <pattern> FAVOURITE GUN IN VALORANT </pattern>
+  <template>All the guns are great in Valorant, my favourite would be the Marshal, although i love the Phantom as well!</template></category>
+
+<category> <pattern> FAVOURITE MAP IN VALORANT </pattern>
+  <template>Honestly all the maps are quite bad but my top three would be Ascent, Icebox and Pearl</template></category>
+
+<category> <pattern> FAVOURITE AGENT IN VALORANT </pattern>
+  <template>I like all of them. But my favourite is Sova!</template></category>
+
+<category> <pattern> HOW DO I DEFAULT </pattern>
+  <template>Take passive positions and look for a pick</template></category>
+
+<category> <pattern> HOW DO I SPLIT SITES </pattern>
+  <template>Have 3 people go through main entrance and 2 people go through side entrance</template></category>
+
+<category> <pattern> HOW TO HAVE GOOD CROSSHAIR PLACEMENT </pattern>
+  <template>Have your crosshair at head height of the angle the enemy is peaking. Have your crosshair a fair distance away from the wall and click some heads!</template></category>
+
+<category> <pattern> BEST AGENTS I SHOULD HAVE ON MY TEAM </pattern>
+  <template>You should idealy have 1 Sentinel, 1 Controller, 1 Duelist, 1 Initiator and the last person can be anything depending on the map and stratergy</template></category>
+
+<category> <pattern> I LOST FIRST ROUND. WHAT DO I DO </pattern>
+  <template>You should save your money and not buy. You will have a full buy for round 3.</template></category>
+
+<category> <pattern> HOW MUCH DAMAGE DOES A VANDAL DO </pattern>
+  <template>One shot headshot at any range</template></category>
+
+<category> <pattern> HOW MUCH DAMAGE DOES A PHANTOM DO </pattern>
+  <template>Close Range 1 shot headshot, Medium and long range is 1 headshot 1 bodyshot</template></category>
+
+
+<!-- Image Detection -->
+  <category><pattern> WHO IS THIS * </pattern>
+  <template>#1$<star/></template></category>
+
+<category><pattern> WHAT IS THIS VALORANT AGENT </pattern>
+  <template><srai>WHO IS THIS <star/></srai></template></category>
+
+
+<!-- Task B input -->
+<category><pattern> I KNOW THAT * IS *</pattern>
+  <template>#31$<star index="1"/> is <star index="2"/></template></category>
+
+<category><pattern> CHECK THAT * IS *</pattern>
+  <template>#32$<star index="1"/> is <star index="2"/></template></category>
+   
+
+  <!-- default response -->
+<category><pattern> * </pattern>
+  <template>#99$<star index="1"/></template></category>
+
+</aiml>
